@@ -58,8 +58,11 @@ class World:
 
 
 	def gen(self):
-		next_gen = self.table
+		#create a new table
+		next_gen = [None] * self.width
+
 		for x in range(self.width):
+			next_gen[x] = [None] * self.height
 			for y in range(self.height):
 				neighbors = self.liveNeighbors(x, y)
 				if neighbors > 2: next_gen[x][y] = 0

@@ -9,8 +9,8 @@ class World:
 
 	def __init__(self, seed=None, height=10, width=10):
 		if seed == None:
-			self.height = height
-			self.width = width
+			self.height = height - 1
+			self.width = width - 1
 
 			self.table = [None] * width
 			for i in range(width):
@@ -54,7 +54,7 @@ class World:
 
 	def deadNeighbors(self, x, y):
 	#Obviously not necessary but short enough to be worth writing anyway
-		return 9 - self.live(x, y)
+		return 8 - self.live(x, y)
 
 
 	def gen(self):

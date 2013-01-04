@@ -54,7 +54,7 @@ class World:
 
 	def deadNeighbors(self, x, y):
 	#Obviously not necessary but short enough to be worth writing anyway
-		return 8 - self.live(x, y)
+		return 8 - self.liveNeighbors(x, y)
 
 
 	def gen(self):

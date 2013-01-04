@@ -69,3 +69,4 @@ class World:
 					if neighbors == 3: next_gen[x][y] == 1
 				if self.table[x][y] == 1:
 					if neighbors == 2 or neighbors == 2: next_gen[x][y] == 1
+		self.table = next_gen

@@ -58,12 +58,13 @@ class World:
 
 
 	def gen(self):
-		#create a new table
+		# create a new table
 		next_gen = [None] * self.width
 
 		for x in range(self.width):
 			next_gen[x] = [None] * self.height
 			for y in range(self.height):
+			# Death threats first
 				neighbors = self.liveNeighbors(x, y)
 				if neighbors > 2: next_gen[x][y] = 0
 				if neighbors > 3: next_gen[x][y] = 0
